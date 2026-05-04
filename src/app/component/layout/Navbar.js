@@ -1,4 +1,6 @@
 "use client"
+import Image from 'next/image';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
@@ -32,7 +34,18 @@ export default function Navbar() {
     return (
         <>
             <div className={`fixed text-white h-15 w-full flex items-center justify-between px-4 sm:px-6 md:px-10 z-50 ${isTop ? "bg-black/30" : "bg-[#62525f]/90"} duration-300 md:h-16`}>
-                <p className="font-semibold text-lg md:text-xl cursor-pointer">JIRO</p>
+                <div className='flex items-center gap-3'>
+                    {/* <Image
+                        src="/icons/profile.png"
+                        width={50}
+                        height={50}
+                        alt='profile'
+                        className='rounded-full border-2 border-dashed border-white'
+                    /> */}
+                    
+                    <Link href='/' className="font-semibold text-lg md:text-xl cursor-pointer">JIRO</Link>
+                </div>
+                
                 <div className="flex items-center gap-4 md:gap-10">
                     {/* Desktop links */}
                     <div className="hidden md:flex gap-6 lg:gap-10">
@@ -63,7 +76,7 @@ export default function Navbar() {
             
             {/* Mobile menu */}
             {mobileOpen && (
-                <div className={`fixed inset-0 z-40 md:hidden ${isTop ? "bg-black/30" : "bg-[#62525f]"} backdrop-blur-sm flex flex-col justify-center items-center gap-8 py-12 px-6`}>
+                <div className={`fixed inset-0 z-40 md:hidden ${isTop ? "bg-black/30" : "bg-black/30 md:bg-[#62525f]"} backdrop-blur-sm flex flex-col justify-center items-center gap-8 py-12 px-6`}>
                     {links.map((link) => {
                         const active = isActive(link.href);
                         return (
@@ -81,9 +94,6 @@ export default function Navbar() {
                         className="absolute top-4 right-4 p-2 text-white"
                         onClick={toggleMobile}
                     >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                        </svg>
                     </button>
                 </div>
             )}

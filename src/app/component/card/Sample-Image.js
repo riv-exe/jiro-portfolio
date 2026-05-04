@@ -8,7 +8,7 @@ export default function SampleImage({src}) {
                 width={400}
                 height={400}
                 alt="arts"
-                className="w-full object-cover max-h-[500px] rounded-xl transition-transform duration-300 ease-in-out hover:scale-105"
+                className="rounded-xl transition-all duration-300 ease-in-out md:brightness-90 hover:scale-105 hover:brightness-100"
             />
         </>        
     )
