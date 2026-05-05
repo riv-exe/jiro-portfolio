@@ -16,7 +16,7 @@ export default function Links({ className }) {
         <Image src="/icons/logo-tiktok.svg" width={30} height={30} alt="tiktok" />
       </a>
 
-      <a href="mailto:youremail@gmail.com">
+      <a href="mailto:jiro_commissions@gmail.com">
         <Image src="/icons/mail.svg" width={40} height={40} alt="email" />
       </a>
 

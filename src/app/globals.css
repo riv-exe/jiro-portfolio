@@ -40,3 +40,20 @@ body {
     font-size: 0.95rem;
   }
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8edf5; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7c5473; 
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #874080; 
+}

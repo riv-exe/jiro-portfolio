@@ -5,7 +5,7 @@ export default function TermsOfService() {
     return (
         <div className="mt-16">
             <div className="p-10">
-                <p className="text-center text-violet-800 text-4xl font-bold">TERMS OF SERVICE</p>
+                <p className="text-center text-violet-500 text-4xl md:text-5xl font-extrabold">TERMS OF SERVICE</p>
                 <div className="flex items-center gap-3 w-full max-w-xs mx-auto mt-2 mb-10">
                     <div className="flex-1 h-px bg-violet-200" />
                     <span className="text-violet-300 text-lg">✦</span>
@@ -13,8 +13,8 @@ export default function TermsOfService() {
                 </div>
             </div>
 
-            <div className="flex flex-col gap-10 items-center justify-center px-3 pb-10 md:px-10">
-                
+            <div className="flex flex-col gap-10 items-center justify-center px-3 pb-10 md:px-10 mb-15">
+
                 <TosCard title="01. Payment">
                     <p>Mode of Payment (MoD):</p>
                     <p>★ GCash/Maribank (FKA Seabank) — if you&apos;re a Filipino (or capable of paying via GCash or Maribank)</p>
@@ -50,7 +50,7 @@ export default function TermsOfService() {
                     <p>❀ I&apos;m allowed to post WIP&apos;s (work in progress) and finished artworks on any of my social media account or site.</p>
                     <p>❀ I&apos;m allowed to use commissioned artworks (commercial or not) as my samples for my portfolio/carrd site.</p>
                     <p>[Client&apos;s commissions will be posted with watermarks]</p>
-                    
+
                     <p className="mt-4">❀ NSFW and Age Verification:</p>
                     <p>I only accept NSFW or adult-themed commissions from clients who are 18 years or older.</p>
                     <p>For highly explicit NSFW, I may require proof of age before starting the commission.</p>

@@ -25,12 +25,12 @@ const priceItems = {
 function PriceRow({ label, php, usd, index }) {
     return (
         <div
-            className="flex items-center justify-between border-b border-violet-200/60 py-2 last:border-0"
+            className="flex items-center justify-between border-b border-violet-300/70 py-2 last:border-0"
             style={{ animationDelay: `${index * 60}ms` }}
         >
-            <span className="font-semibold text-violet-700 tracking-wide text-sm sm:text-base">{label}</span>
+            <span className="font-semibold text-violet-500 tracking-wide text-sm sm:text-base">{label}</span>
             <div className="flex items-center gap-2 sm:gap-4">
-                <span className="bg-violet-100 text-violet-700 font-bold text-xs sm:text-sm px-2 py-0.5 rounded-full">{php}</span>
+                <span className="bg-violet-100 text-violet-500 font-bold text-xs sm:text-sm px-2 py-0.5 rounded-full">{php}</span>
                 <span className="text-violet-400 text-xs">·</span>
                 <span className="bg-pink-100 text-pink-600 font-bold text-xs sm:text-sm px-2 py-0.5 rounded-full">{usd}</span>
             </div>
@@ -41,9 +41,9 @@ function PriceRow({ label, php, usd, index }) {
 function SectionDivider() {
     return (
         <div className="flex items-center gap-3 w-full max-w-xs my-2">
-            <div className="flex-1 h-px bg-violet-200" />
-            <span className="text-violet-300 text-lg">✦</span>
-            <div className="flex-1 h-px bg-violet-200" />
+            <div className="flex-1 h-px bg-violet-300" />
+            <span className="text-violet-400 text-lg">✦</span>
+            <div className="flex-1 h-px bg-violet-300" />
         </div>
     );
 }
@@ -58,7 +58,7 @@ export default function Price() {
     };
 
     return (
-        <div className="min-h-screen pt-8">
+        <div className="min-h-screen pt-8 md:mt-10">
 
             <style>{`
                 @keyframes fadeSlideUp {
@@ -83,12 +83,12 @@ export default function Price() {
             <div className="hidden md:flex w-full h-screen items-center justify-center px-4">
                 <div className="w-full max-w-5xl">
                     <div className="text-center mb-14 animate-in">
-                        <p className="italic text-violet-400 text-lg mb-1">commission</p>
-                        <h1 className="text-5xl font-bold text-violet-800 tracking-tight">PRICE GUIDE</h1>
+                        <p className="italic text-violet-500 text-lg mb-1">commission</p>
+                        <h1 className="text-5xl font-extrabold text-violet-500 tracking-tight">PRICE GUIDE</h1>
                         <div className="flex items-center gap-3 w-full max-w-xs mx-auto my-2">
-                            <div className="flex-1 h-px bg-violet-200" />
-                            <span className="text-violet-300 text-lg">✦</span>
-                            <div className="flex-1 h-px bg-violet-200" />
+                            <div className="flex-1 h-px bg-violet-100" />
+                            <span className="text-violet-200 text-lg">✦</span>
+                            <div className="flex-1 h-px bg-violet-100" />
                         </div>
                     </div>
                     <div className="grid grid-cols-3 gap-8 place-items-center animate-in" style={{ animationDelay: "0.15s" }}>
@@ -101,12 +101,12 @@ export default function Price() {
 
             {/* ── Mobile page heading ── */}
             <div className="md:hidden text-center pt-10 pb-2 px-6 animate-in">
-                <p className="italic text-violet-400 text-base mb-0.5">commission</p>
-                <h1 className="text-4xl font-bold text-violet-800">PRICE GUIDE</h1>
+                <p className="italic text-violet-500 text-base mb-0.5">commission</p>
+                <h1 className="text-4xl font-extrabold text-violet-500">PRICE GUIDE</h1>
                 <div className="flex items-center gap-3 w-full max-w-xs mx-auto my-2">
-                    <div className="flex-1 h-px bg-violet-200" />
-                    <span className="text-violet-300 text-lg">✦</span>
-                    <div className="flex-1 h-px bg-violet-200" />
+                    <div className="flex-1 h-px bg-violet-100" />
+                    <span className="text-violet-200 text-lg">✦</span>
+                    <div className="flex-1 h-px bg-violet-100" />
                 </div>
             </div>
 
@@ -120,7 +120,6 @@ export default function Price() {
                     <div
                         className="md:hidden mx-4 my-8 rounded-2xl overflow-hidden border border-violet-200 shadow-lg price-card-hover animate-in cursor-pointer"
                         style={{ animationDelay: "0.1s" }}
-                        onClick={() => openModal("/layout/body-price.png")}
                     >
                         <div className="relative bg-[#ead5f5] dot-pattern">
                             <Image
@@ -140,8 +139,8 @@ export default function Price() {
                                 View Proportions ↗
                             </button>
                         </div>
-                        <div className="bg-white/80 backdrop-blur-sm px-5 pt-4 pb-5">
-                            <h2 className="text-2xl font-bold text-violet-800 mb-3">PRICE</h2>
+                        <div className="bg-white/60 backdrop-blur-sm px-5 pt-4 pb-5">
+                            <h2 className="text-2xl font-bold text-violet-500 mb-3">PRICE</h2>
                             <div className="flex flex-col">
                                 {priceItems.body.map((item, i) => (
                                     <PriceRow key={item.label} {...item} index={i} />
@@ -152,15 +151,14 @@ export default function Price() {
 
                     {/* Desktop */}
                     <div
-                        className="hidden md:flex cursor-pointer animate-in price-card-hover bg-[#ead5f5] border-y border-violet-200 dot-pattern overflow-hidden"
+                        className="hidden md:flex animate-in price-card-hover bg-[#ead5f5] border-y border-violet-200 dot-pattern overflow-hidden"
                         style={{ animationDelay: "0.2s" }}
-                        onClick={() => openModal("/layout/body-price.png")}
                     >
                         {/* Text side */}
                         <div className="flex flex-col justify-center gap-3 pl-14 py-12 flex-1 min-w-0">
                             <div className="mb-1">
                                 <p className="italic text-violet-400 text-lg">commission</p>
-                                <h2 className="text-5xl lg:text-6xl font-bold text-violet-800 leading-tight">PRICE</h2>
+                                <h2 className="text-5xl lg:text-6xl font-bold text-violet-500 leading-tight">PRICE</h2>
                             </div>
                             <SectionDivider />
                             <div className="flex flex-col gap-1 mt-1 max-w-sm">
@@ -169,7 +167,7 @@ export default function Price() {
                                 ))}
                             </div>
                             <button
-                                className="view-btn mt-3 w-fit bg-violet-500 hover:bg-violet-600 text-white rounded-full py-2 px-6 font-semibold text-sm shadow-md"
+                                className="view-btn cursor-pointer mt-3 w-fit bg-violet-500 hover:bg-violet-600 text-white rounded-full py-2 px-6 font-semibold text-sm shadow-md"
                                 onClick={(e) => { e.stopPropagation(); openModal("/layout/body-price.png"); }}
                             >
                                 View Proportion ↗
@@ -195,7 +193,6 @@ export default function Price() {
                     <div
                         className="md:hidden mx-4 my-8 rounded-2xl overflow-hidden border border-violet-200 shadow-lg price-card-hover animate-in cursor-pointer"
                         style={{ animationDelay: "0.2s" }}
-                        onClick={() => openModal("/layout/chibi-price.png")}
                     >
                         <div className="relative bg-[#f5d5f0] dot-pattern">
                             <Image
@@ -215,8 +212,8 @@ export default function Price() {
                                 View Proportions ↗
                             </button>
                         </div>
-                        <div className="bg-white/80 backdrop-blur-sm px-5 pt-4 pb-5">
-                            <h2 className="text-2xl font-bold text-violet-800 mb-3">CHIBI PRICE</h2>
+                        <div className="bg-white/60 backdrop-blur-sm px-5 pt-4 pb-5">
+                            <h2 className="text-2xl font-bold text-violet-500 mb-3">CHIBI PRICE</h2>
                             <div className="flex flex-col">
                                 {priceItems.chibi.map((item, i) => (
                                     <PriceRow key={item.label} {...item} index={i} />
@@ -227,9 +224,8 @@ export default function Price() {
 
                     {/* Desktop — mirrored: image left, text right */}
                     <div
-                        className="hidden md:flex cursor-pointer animate-in price-card-hover bg-[#f5d5f0] border-y border-pink-200 dot-pattern overflow-hidden"
+                        className="hidden md:flex justify-between animate-in price-card-hover bg-[#f5d5f0] border-y border-pink-200 dot-pattern overflow-hidden"
                         style={{ animationDelay: "0.3s" }}
-                        onClick={() => openModal("/layout/chibi-price.png")}
                     >
                         {/* Image side */}
                         <div className="flex-shrink-0 flex items-end justify-start">
@@ -242,10 +238,10 @@ export default function Price() {
                             />
                         </div>
                         {/* Text side */}
-                        <div className="flex flex-col justify-center gap-3 pl-15 py-12 flex-1 min-w-0">
+                        <div className="flex flex-col justify-center gap-3 py-12 flex-1 pl-15 min-w-0">
                             <div className="mb-1">
                                 <p className="italic text-pink-400 text-lg">commission</p>
-                                <h2 className="text-5xl lg:text-6xl font-bold text-violet-800 leading-tight">CHIBI PRICE</h2>
+                                <h2 className="text-5xl lg:text-6xl font-bold text-violet-500 leading-tight">CHIBI PRICE</h2>
                             </div>
                             <SectionDivider />
                             <div className="flex flex-col gap-1 mt-1 max-w-sm">
@@ -254,7 +250,7 @@ export default function Price() {
                                 ))}
                             </div>
                             <button
-                                className="view-btn mt-3 w-fit bg-pink-400 hover:bg-pink-500 text-white rounded-full py-2 px-6 font-semibold text-sm shadow-md"
+                                className="view-btn cursor-pointer mt-3 w-fit bg-pink-400 hover:bg-pink-500 text-white rounded-full py-2 px-6 font-semibold text-sm shadow-md"
                                 onClick={(e) => { e.stopPropagation(); openModal("/layout/chibi-price.png"); }}
                             >
                                 View Proportion ↗

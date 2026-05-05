@@ -11,7 +11,7 @@ export default function TosCard({ children, title }) {
         >
             {/* Header */}
             <div className="flex justify-between items-center">
-                <p>{title}</p>
+                <p className={`${isCollapse ? "font-extrabold" : ""}`}>{title}</p>
 
                 {/* Arrow */}
                 <span
@@ -19,7 +19,7 @@ export default function TosCard({ children, title }) {
                         isCollapse ? "rotate-90" : "rotate-0"
                     }`}
                 >
-                    ﹥
+                    ›
                 </span>
             </div>
 

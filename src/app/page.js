@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Links from "./component/card/Link";
 import Footer from "./component/layout/Footer";
+import PriceCard from "./component/card/PriceCard";
 
 export default function Home() {
   const router = useRouter();
@@ -59,9 +60,21 @@ export default function Home() {
           I mainly focus on character art, fanart, and custom commissions with soft, detailed visuals.
           Feel free to check out my work and commission info—I&apos;d love to bring your ideas to life! ࣪ ִֶָ☾.
         </p>
-        <button className="bg-violet-500 hover:bg-violet-600 rounded-xl px-6 py-3 sm:px-8 sm:py-4 w-fit font-semibold text-sm sm:text-base transition-all shadow-lg hover:shadow-xl">
-          Commission Now
-        </button>
+        <a href="https://www.facebook.com/jin.rose.jiro/">
+          <button className="bg-violet-500 hover:bg-violet-600 rounded-xl px-6 py-3 sm:px-8 sm:py-4 w-fit font-semibold text-sm sm:text-base transition-all shadow-lg hover:shadow-xl">
+            Commission Now
+          </button>
+        </a>
+      </div>
+
+      <div className="bg-[#dcb7e0] py-10">
+        <p className="text-3xl text-center sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-violet-500 mb-15">Price Guide</p>
+        <div className="flex flex-col md:grid grid-cols-3 gap-8 place-items-center animate-in md:flex" style={{ animationDelay: "0.15s" }}>
+            <PriceCard src="/layout/body-price.png" title="Body Price" height="h-80" href="/price#body" className="md:hidden"/>
+            <PriceCard src="/layout/chibi-price.png" title="Chibi Price" href="/price#chibi" />
+            <PriceCard src="/layout/body-price.png" title="Body Price" height="h-80" href="/price/#body" className="hidden md:flex"/>
+            <PriceCard src="/layout/emotes-price.png" title="Emotes Price" href="#emotes" />
+        </div>
       </div>
 
       <Footer/>
