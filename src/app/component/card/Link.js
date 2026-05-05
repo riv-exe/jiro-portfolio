@@ -17,7 +17,7 @@ export default function Links({ className }) {
       </a>
 
       <a href="mailto:jiro_commissions@gmail.com">
-        <Image src="/icons/mail.svg" width={40} height={40} alt="email" />
+        <Image src="/icons/mail.svg" width={30} height={30} alt="email" />
       </a>
 
     </div>
