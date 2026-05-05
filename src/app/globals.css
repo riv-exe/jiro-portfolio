@@ -18,6 +18,10 @@
     --foreground: #ffffff;
   }
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* adjust to navbar height */
+}
 
 body {
   background: var(--background);
