@@ -1,7 +1,7 @@
 "use client"
 
 import CommissionSamples from "../component/container/CommissionSamples";
-import PersonalSamples   from "../component/container/PersonalSamples";
+import PersonalSamples from "../component/container/PersonalSamples";
 import { useState } from "react";
 
 export default function Samples() {

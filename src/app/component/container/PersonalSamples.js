@@ -1,4 +1,4 @@
-import SampleImage from "../card/Sample-Image";
+import SampleImage from "../card/Sample-Image"
 
 export default function PersonalSamples() {
     return (

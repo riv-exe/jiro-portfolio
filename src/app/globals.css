@@ -30,6 +30,11 @@ body {
   line-height: 1.6;
 }
 
+.dot-pattern {
+    background-image: radial-gradient(circle, rgba(139,92,246,0.12) 1px, transparent 1px);
+    background-size: 18px 18px;
+}
+
 @media (max-width: 640px) {
   body {
     font-size: 0.95rem;

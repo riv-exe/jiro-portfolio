@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import { useRouter } from "next/navigation";
 import Links from "./component/card/Link";
+import Footer from "./component/layout/Footer";
 
 export default function Home() {
   const router = useRouter();
@@ -62,6 +63,8 @@ export default function Home() {
           Commission Now
         </button>
       </div>
+
+      <Footer/>
     </div>
   );
 }

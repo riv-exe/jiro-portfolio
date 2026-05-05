@@ -11,6 +11,7 @@ export default function Navbar() {
         { label: 'Home', href: '/' },
         { label: 'Samples', href: '/samples' },
         { label: 'Price', href: '/price' },
+        { label: 'ToS', href: '/tos' },
         { label: 'Commercial Info', href: '/commercial' },
     ];
 
@@ -29,12 +30,12 @@ export default function Navbar() {
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    }, []); 
 
     return (
         <>
             <div className={`fixed text-white h-15 w-full flex items-center justify-between px-4 sm:px-6 md:px-10 z-50 ${isTop ? "bg-black/30" : "bg-[#62525f]/90"} duration-300 md:h-16`}>
-                <div className='flex items-center gap-3'>
+                <div className='flex items-center gap-3'> 
                     {/* <Image
                         src="/icons/profile.png"
                         width={50}
@@ -76,7 +77,7 @@ export default function Navbar() {
             
             {/* Mobile menu */}
             {mobileOpen && (
-                <div className={`fixed inset-0 z-40 md:hidden ${isTop ? "bg-black/30" : "bg-black/30 md:bg-[#62525f]"} backdrop-blur-sm flex flex-col justify-center items-center gap-8 py-12 px-6`}>
+                <div className={`fixed inset-0 z-40 md:hidden ${isTop ? "bg-black/30" : "bg-black/30 md:bg-[#62525f]"} backdrop-blur-sm flex flex-col justify-center items-center gap-8 py-12 px-6`}> 
                     {links.map((link) => {
                         const active = isActive(link.href);
                         return (
